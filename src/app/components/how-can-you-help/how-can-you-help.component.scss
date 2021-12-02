@@ -5,9 +5,9 @@
   background-size: contain;
   background-position: center;
   text-shadow: white 0px 0px 2px;
-  background-color: #7d7c7c;
-  filter: blur(3px);
-  -webkit-filter: blur(3px);
+  // background-color: #7d7c7c;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
   z-index: -9;
 }
 
@@ -17,4 +17,9 @@
   height: 100%;
   background-color: black;
   opacity: 0.3;
+}
+
+.bg {
+  background-color: gray;
+  z-index: -1;
 }
