@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  flutterPublicKey: 'FLWPUBK_TEST-c03fcd8ed265c13d7f5d7b583ec45384-X',
 };
 
 /*

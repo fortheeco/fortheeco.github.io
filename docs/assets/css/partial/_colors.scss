@@ -1,2 +1,98 @@
 
 
+/*--------------------------------------- Colors ------------------------------------*/
+
+:root, :root.light {
+  /* default colors */
+  --c-bg-primary: #F1FFF4;
+  --c-bg-secondary: var(--bs-light);
+  --c-bg-secondary-2: var(--bs-gray-dark);
+  --c-bg-secondary-3: var(--bs-white);
+  --c-bg-secondary-4: #ddd;
+  --c-bg-secondary-5: #F1FFF4;;
+
+  /* font awesome colors */
+  --color-fas: var(--bs-dark);
+
+  /* typography colors */
+  --c-text-primary: var(--bs-dark);
+  --c-text-secondary: var(--bs-gray-dark);
+}
+
+:root.dark {
+  --c-bg-primary: #000;
+  --c-bg-secondary: #1e221e;
+  /* --c-bg-secondary: #242526; */
+  --c-bg-secondary-2: var(--bs-gray-dark);
+  --c-bg-secondary-3: #000;
+  --c-bg-secondary-4:#000;
+  --c-bg-secondary-5: #1c1d1c;
+
+  --color-fas: var(--bs-success);
+
+  --c-text-primary: #ccc;
+  --c-text-secondary: #eee;
+}
+
+.c-text-primary {
+  color: var(--c-text-primary);
+}
+
+.c-text-secondary {
+  color: var(--c-text-secondary);
+}
+
+.c-bg-primary {
+  background-color: var(--c-bg-primary);
+}
+
+.c-bg-secondary {
+  background-color: var(--c-bg-secondary);
+}
+
+.c-bg-secondary_2 {
+  background-color: var(--c-bg-secondary-2);
+}
+
+.c-bg-secondary_3 {
+  background-color: var(--c-bg-secondary-3);
+}
+
+.c-bg-secondary_4 {
+  background-color: var(--c-bg-secondary-4);
+}
+
+.c-bg-secondary_5 {
+  background-color: var(--c-bg-secondary-5);
+}
+
+
+/* // h1, h2, h3, h4, h5, h6, p, a, legend, label, small, span, strong {
+//   color: var(--c-text-primary) !important;
+// } */
+
+h4.responsive, .h4.responsive {
+  font-size: 1.1rem;
+}
+
+span.responsive, strong.responsive {
+  font-size: 0.9rem;
+}
+
+.fas, .fa {
+  color: var(--color-fas);
+}
+
+/* // Typography */
+
+@media only screen and (min-width: 992px) {
+  h4.responsive, .h4.responsive {
+    font-size: 1.5rem;
+  }
+
+  span.responsive, strong.responsive {
+    font-size: 1rem;
+  }
+
+}
+
