@@ -1,0 +1,50 @@
+<div class="modal-content">
+  <div class="modal-header c-bg-primary">
+    <h5 class="modal-title">Donate for the cause</h5>
+    <button (click)="activeModal.close()" class="btn" type="button" data-bs-dismiss="modal" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="modal-body c-bg-secondary">
+
+    <form [formGroup]="donateForm">
+
+      <div class="row">
+
+        <div class="form-group col-12">
+          <label class="form-control-label" for="nameField">Your name *</label>
+          <input autocomplete="false" maxlength="128" type="text" class="form-control is-invalid" id="nameField" formControlName="name" [ngClass]="{'is-invalid': errorService.getError(donateForm, 'name')}" >
+          <app-custom-error-message [errorMessage]="errorService.getError(donateForm, 'name')"></app-custom-error-message>
+        </div>
+
+        <div class="form-group col-12">
+          <label class="form-control-label" for="emaillAddress">Email *</label>
+          <input autocomplete="false" maxlength="128" type="text" class="form-control is-invalid" id="emaillAddress" formControlName="email" [ngClass]="{'is-invalid': errorService.getError(donateForm, 'email')}" >
+          <app-custom-error-message [errorMessage]="errorService.getError(donateForm, 'email')"></app-custom-error-message>
+        </div>
+
+        <div class="form-group col-12">
+          <label class="form-control-label" for="phone">Phone number (optional)</label>
+          <input autocomplete="false" maxlength="15" type="text" class="form-control is-invalid" id="phone" formControlName="phone_number" [ngClass]="{'is-invalid': errorService.getError(donateForm, 'phone_number')}" >
+          <app-custom-error-message [errorMessage]="errorService.getError(donateForm, 'phone_number')"></app-custom-error-message>
+        </div>
+
+        <div class="form-group col-12">
+          <label class="form-control-label" for="amount">Amount *</label>
+          <div class="input-group">
+            <span class="input-group-text" id="basic-addon1"><span>&#8358;</span></span>
+            <input type="text" type="number" class="form-control is-invalid" id="amount"  aria-describedby="basic-addon1" formControlName="amount" [ngClass]="{'is-invalid': errorService.getError(donateForm, 'amount')}">
+          </div>
+          <app-custom-error-message [errorMessage]="errorService.getError(donateForm, 'amount')"></app-custom-error-message>
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+  <div class="modal-footer c-bg-primary d-flex justify-content-between">
+    <button (click)="donate()" type="button" [disabled]="donateForm.invalid" class="btn btn-primary">Donate</button>
+    <button (click)="activeModal.close()" type="button" class="btn btn-secondary text-dark" data-bs-dismiss="modal">Close</button>
+  </div>
+</div>

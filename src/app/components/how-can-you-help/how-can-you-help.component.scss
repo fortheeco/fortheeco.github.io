@@ -21,5 +21,9 @@
 
 .bg {
   background-color: gray;
-  z-index: -1;
+  background-image: url('/assets/images/logo2.png');
+  background-repeat: no-repeat;
+  background-size: 70% 70%;
+  background-position: center;
+  // z-index: -1;
 }

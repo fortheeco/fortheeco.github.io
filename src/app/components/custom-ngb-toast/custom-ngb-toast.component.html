@@ -1,0 +1,9 @@
+
+<div class="wrapper">
+  <ngb-toast
+  *ngFor="let toast of toastService?.toasts"
+  [class]="toast.css" [autohide]="true" [delay]="toast.delay || 5000"
+  (hide)="toastService.remove(toast)"
+>{{toast.body}}</ngb-toast>
+
+</div>
