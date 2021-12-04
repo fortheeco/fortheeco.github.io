@@ -10,6 +10,7 @@ import { LearnDoCreateComponent } from './components/learn-do-create/learn-do-cr
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { HowCanYouHelpComponent } from './components/how-can-you-help/how-can-you-help.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { FlutterwaveModule } from "flutterwave-angular-v3"
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FlutterwaveModule
   ],
   providers: [],
   bootstrap: [AppComponent]
