@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { MakeDonationsComponent } from 'src/app/modals/make-donations/make-donations.component';
 
 @Component({
   selector: 'app-contact-us',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactUsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private modalService: NgbModal
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  beginDonation(): void {
+    this.modalService.open(MakeDonationsComponent);
   }
 
 }
